@@ -15,7 +15,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           <title>jir.sh portfolio</title>
         </Head>
         <Header />
-        {children}
+        <main className="pt-3 mx-3">{children}</main>
         <Footer />
       </div>
     </div>
