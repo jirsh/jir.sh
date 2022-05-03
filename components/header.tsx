@@ -11,7 +11,12 @@ const Header = () => {
       <div className="ml-auto" />
       <Link href="/p">
         <a>
-          <div className="hidden md:block">Projects</div>
+          <div className="hidden md:block mr-3">Projects</div>
+        </a>
+      </Link>
+      <Link href="mailto:c@jir.sh">
+        <a>
+          <div className="hidden md:block">Contact</div>
         </a>
       </Link>
     </header>
