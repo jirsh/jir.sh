@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import useSWR from "swr";
 
@@ -6,6 +7,9 @@ const Projects: NextPage = () => {
   const { data, error } = useSWR(`https://api.github.com/users/jirsh/repos`);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <Head>
+        <title>jir.sh | projects</title>
+      </Head>
       {(data &&
         !error &&
         data.map((item: any) => (

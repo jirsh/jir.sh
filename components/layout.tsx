@@ -12,7 +12,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className="bg-slate-800 text-white">
       <div className="min-h-screen mx-auto container flex flex-col">
         <Head>
-          <title>jir.sh portfolio</title>
+          <title>jir.sh</title>
         </Head>
         <Header />
         <main className="pt-3 mx-3 md:mx-0">{children}</main>
