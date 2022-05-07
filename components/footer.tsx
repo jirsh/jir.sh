@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="min-w-full bg-slate-700 h-12 p-3 flex items-center shadow-2xl mt-auto rounded-t-lg">
+    <footer className="h-12 p-3 flex items-center mt-auto">
       <div className="text-sm md:text-lg">
         Made with ❤️ using{" "}
         <Link href="https://nextjs.org/">
