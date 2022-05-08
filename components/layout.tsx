@@ -9,7 +9,7 @@ type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-slate-800 text-white">
+    <div className="bg-slate-800 text-white select-none">
       <div className="min-h-screen mx-auto container flex flex-col">
         <Head>
           <title>jir.sh</title>

@@ -65,7 +65,7 @@ const Header = () => {
         </div>
       </header>
       <nav
-        className={`absolute top-16 flex h-16 mt-3 container mx-auto md:hidden transition-transform ${
+        className={`absolute z-[100] top-16 flex h-16 mt-3 container mx-auto md:hidden transition-transform ${
           opened ? "scale-100" : "scale-0"
         }`}
       >
