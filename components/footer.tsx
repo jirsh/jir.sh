@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="h-12 p-3 flex items-center mt-auto">
-      <div className="text-sm md:text-lg">
+    <footer className="footer">
+      <div>
         Made with ❤️ using{" "}
         <Link href="https://nextjs.org/">
           <a target="_blank">Next.JS</a>
@@ -19,6 +20,14 @@ const Footer = () => {
         and{" "}
         <Link href="https://pages.cloudflare.com/">
           <a target="_blank">Cloudflare Pages</a>
+        </Link>
+      </div>
+      <div className="ml-0 md:ml-auto">
+        <Link href="https://github.com/jirsh">
+          <a className="flex items-center space-x-1" target="_blank">
+            <FaGithub />
+            <div>GitHub</div>
+          </a>
         </Link>
       </div>
     </footer>

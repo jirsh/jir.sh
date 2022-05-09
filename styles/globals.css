@@ -12,4 +12,12 @@
   .card {
     @apply bg-slate-700 rounded-lg p-2 shadow-xl;
   }
+
+  .header {
+    @apply bg-slate-700 h-16 px-3 flex items-center shadow-2xl rounded-b-lg;
+  }
+
+  .footer {
+    @apply p-3 block md:flex items-center mt-auto text-sm md:text-lg;
+  }
 }
