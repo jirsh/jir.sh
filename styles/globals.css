@@ -20,4 +20,8 @@
   .footer {
     @apply p-3 block md:flex items-center mt-auto text-sm md:text-lg;
   }
+
+  .footer-link {
+    @apply flex items-center space-x-1;
+  }
 }

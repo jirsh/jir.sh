@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaNpm } from "react-icons/fa";
+
+const Seperator = () => <div className="border border-r-white" />;
 
 const Footer = () => {
   return (
@@ -22,11 +24,18 @@ const Footer = () => {
           <a target="_blank">Cloudflare Pages</a>
         </Link>
       </div>
-      <div className="ml-0 md:ml-auto">
+      <div className="ml-0 md:ml-auto flex space-x-2">
         <Link href="https://github.com/jirsh">
-          <a className="flex items-center space-x-1" target="_blank">
+          <a className="footer-link" target="_blank">
             <FaGithub />
             <div>GitHub</div>
+          </a>
+        </Link>
+        <Seperator />
+        <Link href="https://www.npmjs.com/~jirsh">
+          <a className="footer-link" target="_blank">
+            <FaNpm />
+            <div>NPM</div>
           </a>
         </Link>
       </div>
