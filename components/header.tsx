@@ -1,10 +1,27 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BurgerButton from "./burgerbutton";
 import NavLink from "./navlink";
 
 const Header = () => {
   const [opened, setOpened] = useState<boolean>(false);
+  const mobileLinksRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        mobileLinksRef.current &&
+        !mobileLinksRef.current.contains(event.target as Node)
+      ) {
+        setOpened(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobileLinksRef]);
+
   return (
     <>
       <header className="header">
@@ -21,6 +38,7 @@ const Header = () => {
         </div>
       </header>
       <nav
+        ref={mobileLinksRef}
         className={`absolute z-[100] top-16 flex h-16 mt-3 container mx-auto md:hidden transition-transform ${
           opened ? "scale-100" : "scale-0"
         }`}
