@@ -9,15 +9,13 @@ type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-slate-800 text-white select-none">
-      <div className="min-h-screen mx-auto container flex flex-col">
-        <Head>
-          <title>jir.sh</title>
-        </Head>
-        <Header />
-        <main className="pt-3 mx-3 md:mx-0">{children}</main>
-        <Footer />
-      </div>
+    <div className="min-h-screen mx-auto container flex flex-col">
+      <Head>
+        <title>jir.sh</title>
+      </Head>
+      <Header />
+      <main className="pt-3 mx-3 md:mx-0">{children}</main>
+      <Footer />
     </div>
   );
 };

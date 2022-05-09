@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { FaGithub, FaNpm } from "react-icons/fa";
+
+const Seperator = () => <div className="border border-r-white" />;
 
 const Footer = () => {
   return (
-    <footer className="h-12 p-3 flex items-center mt-auto">
-      <div className="text-sm md:text-lg">
+    <footer className="footer">
+      <div>
         Made with ❤️ using{" "}
         <Link href="https://nextjs.org/">
           <a target="_blank">Next.JS</a>
@@ -19,6 +22,21 @@ const Footer = () => {
         and{" "}
         <Link href="https://pages.cloudflare.com/">
           <a target="_blank">Cloudflare Pages</a>
+        </Link>
+      </div>
+      <div className="ml-0 md:ml-auto flex space-x-2">
+        <Link href="https://github.com/jirsh">
+          <a className="footer-link" target="_blank">
+            <FaGithub />
+            <div>GitHub</div>
+          </a>
+        </Link>
+        <Seperator />
+        <Link href="https://www.npmjs.com/~jirsh">
+          <a className="footer-link" target="_blank">
+            <FaNpm />
+            <div>NPM</div>
+          </a>
         </Link>
       </div>
     </footer>
